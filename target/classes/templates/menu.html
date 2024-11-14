@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Saw</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div>
+    <audio controls autoplay loop>
+        <source src="/saw_16%20-%20Hello%20Zepp.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает элемент <code>audio</code>.
+    </audio>
+    <pre th:text="${content}">Загрузка...</pre>
+</div>
+<p>Нажмите чтобы начать:</p>
+
+<ul>
+    <li>
+        <a href="/a11">Тумбочка</a>
+    </li>
+    <li>
+        <a href="/wordguess">Сундук</a>
+    </li>
+    <li>
+        <a href="/findnumber">Сейф</a>
+    </li>
+</ul>
+</body>
+</html>

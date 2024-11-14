@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Игра "Угадай слово"</title>
+</head>
+<body>
+<h1>Игра "Угадай слово"</h1>
+
+<div>
+    <h2>Задание: Угадайте слово</h2>
+    <p th:text="'Загаданное слово: ' + ${guessed}"></p>
+</div>
+
+<div>
+    <h3>Попробуйте угадать букву:</h3>
+    <form action="/wordguess" method="post">
+        <label for="guess">Ваша буква: </label>
+        <input type="text" id="guess" name="guess" maxlength="1" required/>
+        <button type="submit">Проверить</button>
+    </form>
+</div>
+
+<div>
+    <h3 th:text="${message}"></h3>
+</div>
+
+<div>
+    <p>Оставшиеся попытки: <span th:text="${attempts}"></span></p>
+</div>
+
+<div>
+    <a href="/">Назад в меню</a>
+</div>
+</body>
+</html>

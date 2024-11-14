@@ -1,0 +1,7 @@
+body {
+    background-image: url("/saw.jpg");
+    background-size: contain;  /* Изображение будет полностью видно, но не обязательно заполнив весь элемент */
+    background-position: 600px, 50px, 50px, 400px;
+    background-repeat: no-repeat;
+    height: 500px;
+}
